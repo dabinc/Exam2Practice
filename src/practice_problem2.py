@@ -2,8 +2,8 @@
 PRACTICE Test 2, practice_problem 2.
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and dabin_Choi
+"""  # TOD O: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
 # Students:
@@ -30,7 +30,7 @@ import simple_testing as st
 
 def main():
     """ Calls the   TEST   functions in this module. """
-    run_test_practice_problem2a()
+    #run_test_practice_problem2a()
     run_test_practice_problem2b()
 
 
@@ -42,7 +42,7 @@ def main():
 def run_test_practice_problem2a():
     """ Tests the   practice_problem2a  function. """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement this TEST function.
+    # T ODO: 2. Implement this TEST function.
     #   It TESTS the  practice_problem2a  function defined below.
     #   Include at least **   4 reasonable   ** tests.
     #
@@ -55,9 +55,37 @@ def run_test_practice_problem2a():
     print('--------------------------------------------------')
     print('Testing the   practice_problem2a   function:')
     print('--------------------------------------------------')
-
+    #test 1
+    seq = [1, 5, 88, 44]
+    print()
+    print('Test set #1 expected:',
+          [7, 11, 94, 50])
+    print('The above should be:', practice_problem2a([1, 5, 88, 44],6))
+    # test 2
+    seq = [11, 51, 881, 441]
+    print()
+    print('Test set #2 expected:',
+          [14, 54, 884, 444])
+    print('The above should be:', practice_problem2a([11, 51, 881, 441], 3))
+    # test 3
+    seq = [12, 52, 882, 442]
+    print()
+    print('Test set #3 expected:',
+          [14, 54, 884, 444])
+    print('The above should be:', practice_problem2a([12, 52, 882, 442], 2))
+    # test 4
+    seq = [10, 50, 880, 440]
+    print()
+    print('Test set #4 expected:',
+          [11, 51, 881, 441])
+    print('The above should be:', practice_problem2a([10, 50, 880, 440], 1))
 
 def practice_problem2a(sequence, delta):
+    output=[]
+    for k in range(len(sequence)):
+        output+= [sequence[k]+delta]
+    return output
+
     """
     What comes in:
       -- A sequence of integers, e.g. ([2, 10, 5, -20, 8])
@@ -76,7 +104,7 @@ def practice_problem2a(sequence, delta):
       :type delta:    int
     """
     ####################################################################
-    # TODO: 3. Implement and test this function.
+    # T ODO: 3. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
@@ -169,8 +197,19 @@ def practice_problem2b(sequence):
     Type hints:
       :type sequence [str]
     """
+    output=''
+    for k in range (len(sequence)):
+        # if(sequence[k]==''):
+        #     output=output
+        # else:
+        #     output=output+sequence[k][0]
+        if(sequence[k]!=''):
+            output = output+sequence[k][0]
+
+    return output
+
     ####################################################################
-    # TODO: 4. Implement and test this function.
+    # TOD O: 4. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
